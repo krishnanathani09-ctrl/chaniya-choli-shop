@@ -6,7 +6,7 @@
 
 <title>PD Fabrics & Boutique | Chaniya Choli</title>
 
-<meta name="description" content="PD Fabrics & Boutique, Vadodara - Explore our beautiful Chaniya Choli collection for Navratri. Up to 20% off.">
+<meta name="description" content="PD Fabrics & Boutique, Vadodara. Explore our Chaniya Choli collection for Navratri. Up to 20% off.">
 
 <style>
 * {
@@ -33,25 +33,20 @@ body {
     justify-content: center;
     align-items: center;
     text-align: center;
-    padding: 40px 20px;
-    background: linear-gradient(135deg, #fffaf0, #f5dfba);
-}
-
-.om {
-    font-size: 58px;
-    margin-bottom: 12px;
+    padding: 35px 20px;
+    background: linear-gradient(135deg, #fffaf0, #f1d6aa);
 }
 
 .shop-name {
     font-size: 40px;
     font-weight: bold;
     letter-spacing: 2px;
-    margin-bottom: 18px;
+    margin-bottom: 20px;
 }
 
 .hero h2 {
     font-size: 34px;
-    margin-bottom: 12px;
+    margin-bottom: 15px;
 }
 
 .hero p {
@@ -75,66 +70,104 @@ body {
     padding: 14px 28px;
     margin: 8px;
     background: #7b1e2b;
-    color: #fff;
+    color: white;
     text-decoration: none;
     border-radius: 30px;
     font-weight: bold;
-    transition: 0.3s;
+    border: none;
+    cursor: pointer;
 }
 
 .button:hover {
     background: #4b1721;
-    transform: translateY(-2px);
 }
 
 /* COLLECTION */
-.section {
-    padding: 60px 20px;
+.collection {
+    padding: 55px 20px;
     text-align: center;
 }
 
-.section h2 {
-    font-size: 34px;
-    margin-bottom: 35px;
+.collection h2 {
+    font-size: 32px;
+    margin-bottom: 25px;
 }
 
-.gallery {
-    max-width: 1150px;
+.viewer {
+    max-width: 650px;
     margin: auto;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-    gap: 28px;
 }
 
-.card {
-    background: #fff;
+.photo-box {
+    position: relative;
+    background: white;
     padding: 12px;
-    border-radius: 16px;
-    box-shadow: 0 5px 20px rgba(0,0,0,0.12);
+    border-radius: 18px;
+    box-shadow: 0 7px 25px rgba(0,0,0,0.15);
 }
 
-.card img {
+.photo-box img {
     width: 100%;
-    height: 390px;
+    height: 650px;
     object-fit: cover;
-    border-radius: 11px;
+    border-radius: 12px;
     display: block;
+    cursor: pointer;
 }
 
+/* TAP MESSAGE */
+.tap-message {
+    margin-top: 15px;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.counter {
+    margin-top: 8px;
+    font-size: 15px;
+}
+
+/* NAVIGATION */
+.nav-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 18px;
+}
+
+.nav-buttons button {
+    border: none;
+    background: #7b1e2b;
+    color: white;
+    padding: 13px 22px;
+    border-radius: 25px;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 15px;
+}
+
+/* WHATSAPP */
 .whatsapp {
     display: block;
-    margin-top: 12px;
-    padding: 12px;
+    margin-top: 15px;
+    padding: 14px;
     background: #7b1e2b;
     color: white;
     text-decoration: none;
-    border-radius: 25px;
+    border-radius: 28px;
     font-weight: bold;
 }
 
 /* VISIT */
 .visit {
-    background: #f5dfba;
+    padding: 60px 20px;
+    text-align: center;
+    background: #f1d6aa;
+}
+
+.visit h2 {
+    font-size: 32px;
+    margin-bottom: 25px;
 }
 
 .visit p {
@@ -142,6 +175,23 @@ body {
     line-height: 1.8;
     margin: 8px auto;
     max-width: 650px;
+}
+
+/* MUSIC BUTTON */
+.music-button {
+    position: fixed;
+    right: 18px;
+    bottom: 18px;
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
+    border: none;
+    background: #7b1e2b;
+    color: white;
+    font-size: 22px;
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.25);
+    z-index: 999;
 }
 
 /* FOOTER */
@@ -158,6 +208,7 @@ footer {
 
     .shop-name {
         font-size: 28px;
+        letter-spacing: 1px;
     }
 
     .hero h2 {
@@ -170,10 +221,15 @@ footer {
 
     .offer {
         font-size: 21px;
+        padding: 12px 22px;
     }
 
-    .card img {
-        height: 450px;
+    .photo-box img {
+        height: 520px;
+    }
+
+    .collection h2 {
+        font-size: 28px;
     }
 }
 </style>
@@ -184,8 +240,6 @@ footer {
 <!-- HERO -->
 <section class="hero">
 
-    <div class="om">ॐ</div>
-
     <div class="shop-name">
         PD FABRICS & BOUTIQUE
     </div>
@@ -195,7 +249,7 @@ footer {
     <p>
         Still waiting to buy your perfect Chaniya Choli?
         Your festive look deserves something special.
-        Let's explore the beautiful collection at
+        Explore the beautiful collection at
         <strong>PD Fabrics & Boutique</strong>.
     </p>
 
@@ -211,74 +265,50 @@ footer {
 
 
 <!-- COLLECTION -->
-<section class="section" id="collection">
+<section class="collection" id="collection">
 
     <h2>Our Chaniya Choli Collection ✨</h2>
 
-    <div class="gallery">
+    <div class="viewer">
 
-        <div class="card">
-            <img src="chaniya1.jpg" alt="Chaniya Choli Collection 1">
-            <a class="whatsapp" href="https://wa.me/919904474454?text=Hi%20PD%20Fabrics%20%26%20Boutique%2C%20I%20am%20interested%20in%20this%20Chaniya%20Choli." target="_blank">
-                Enquire on WhatsApp
-            </a>
+        <div class="photo-box">
+
+            <img
+                id="mainPhoto"
+                src="chaniya1.jpg"
+                alt="Chaniya Choli Collection"
+                onclick="nextPhoto()"
+            >
+
         </div>
 
-        <div class="card">
-            <img src="chaniya2.jpg" alt="Chaniya Choli Collection 2">
-            <a class="whatsapp" href="https://wa.me/919904474454?text=Hi%20PD%20Fabrics%20%26%20Boutique%2C%20I%20am%20interested%20in%20this%20Chaniya%20Choli." target="_blank">
-                Enquire on WhatsApp
-            </a>
+        <div class="tap-message">
+            👆 Tap the photo for the next design
         </div>
 
-        <div class="card">
-            <img src="chaniya3.jpg" alt="Chaniya Choli Collection 3">
-            <a class="whatsapp" href="https://wa.me/919904474454?text=Hi%20PD%20Fabrics%20%26%20Boutique%2C%20I%20am%20interested%20in%20this%20Chaniya%20Choli." target="_blank">
-                Enquire on WhatsApp
-            </a>
+        <div class="counter" id="counter">
+            1 / 9
         </div>
 
-        <div class="card">
-            <img src="chaniya4.jpg" alt="Chaniya Choli Collection 4">
-            <a class="whatsapp" href="https://wa.me/919904474454?text=Hi%20PD%20Fabrics%20%26%20Boutique%2C%20I%20am%20interested%20in%20this%20Chaniya%20Choli." target="_blank">
-                Enquire on WhatsApp
-            </a>
+        <div class="nav-buttons">
+
+            <button onclick="previousPhoto()">
+                ← Previous
+            </button>
+
+            <button onclick="nextPhoto()">
+                Next →
+            </button>
+
         </div>
 
-        <div class="card">
-            <img src="chaniya5.jpg" alt="Chaniya Choli Collection 5">
-            <a class="whatsapp" href="https://wa.me/919904474454?text=Hi%20PD%20Fabrics%20%26%20Boutique%2C%20I%20am%20interested%20in%20this%20Chaniya%20Choli." target="_blank">
-                Enquire on WhatsApp
-            </a>
-        </div>
-
-        <div class="card">
-            <img src="chaniya6.jpg" alt="Chaniya Choli Collection 6">
-            <a class="whatsapp" href="https://wa.me/919904474454?text=Hi%20PD%20Fabrics%20%26%20Boutique%2C%20I%20am%20interested%20in%20this%20Chaniya%20Choli." target="_blank">
-                Enquire on WhatsApp
-            </a>
-        </div>
-
-        <div class="card">
-            <img src="chaniya7.jpg" alt="Chaniya Choli Collection 7">
-            <a class="whatsapp" href="https://wa.me/919904474454?text=Hi%20PD%20Fabrics%20%26%20Boutique%2C%20I%20am%20interested%20in%20this%20Chaniya%20Choli." target="_blank">
-                Enquire on WhatsApp
-            </a>
-        </div>
-
-        <div class="card">
-            <img src="chaniya8.jpg" alt="Chaniya Choli Collection 8">
-            <a class="whatsapp" href="https://wa.me/919904474454?text=Hi%20PD%20Fabrics%20%26%20Boutique%2C%20I%20am%20interested%20in%20this%20Chaniya%20Choli." target="_blank">
-                Enquire on WhatsApp
-            </a>
-        </div>
-
-        <div class="card">
-            <img src="chaniya9.jpg" alt="Chaniya Choli Collection 9">
-            <a class="whatsapp" href="https://wa.me/919904474454?text=Hi%20PD%20Fabrics%20%26%20Boutique%2C%20I%20am%20interested%20in%20this%20Chaniya%20Choli." target="_blank">
-                Enquire on WhatsApp
-            </a>
-        </div>
+        <a
+            id="whatsappLink"
+            class="whatsapp"
+            href="https://wa.me/919904474454?text=Hi%20PD%20Fabrics%20%26%20Boutique%2C%20I%20am%20interested%20in%20this%20Chaniya%20Choli."
+            target="_blank">
+            💬 Enquire on WhatsApp
+        </a>
 
     </div>
 
@@ -286,7 +316,7 @@ footer {
 
 
 <!-- VISIT US -->
-<section class="section visit">
+<section class="visit">
 
     <h2>Visit Us ✨</h2>
 
@@ -328,10 +358,124 @@ footer {
 </section>
 
 
-<!-- FOOTER -->
+<!-- MUSIC -->
+<audio id="backgroundMusic" loop>
+    <source src="music.mp3" type="audio/mpeg">
+</audio>
+
+<button
+    class="music-button"
+    id="musicButton"
+    onclick="toggleMusic()">
+    🎵
+</button>
+
+
 <footer>
     © 2026 PD Fabrics & Boutique. All Rights Reserved.
 </footer>
+
+
+<script>
+
+const photos = [
+    "chaniya1.jpg",
+    "chaniya2.jpg",
+    "chaniya3.jpg",
+    "chaniya4.jpg",
+    "chaniya5.jpg",
+    "chaniya6.jpg",
+    "chaniya7.jpg",
+    "chaniya8.jpg",
+    "chaniya9.jpg"
+];
+
+let currentPhoto = 0;
+
+const mainPhoto = document.getElementById("mainPhoto");
+const counter = document.getElementById("counter");
+const music = document.getElementById("backgroundMusic");
+const musicButton = document.getElementById("musicButton");
+
+function showPhoto() {
+
+    mainPhoto.src = photos[currentPhoto];
+
+    counter.innerHTML =
+        (currentPhoto + 1) + " / " + photos.length;
+}
+
+function nextPhoto() {
+
+    currentPhoto++;
+
+    if (currentPhoto >= photos.length) {
+        currentPhoto = 0;
+    }
+
+    showPhoto();
+}
+
+function previousPhoto() {
+
+    currentPhoto--;
+
+    if (currentPhoto < 0) {
+        currentPhoto = photos.length - 1;
+    }
+
+    showPhoto();
+}
+
+
+/* MUSIC */
+
+function startMusic() {
+
+    music.play().then(() => {
+
+        musicButton.innerHTML = "🔊";
+
+    }).catch(() => {
+
+        musicButton.innerHTML = "🎵";
+
+    });
+
+}
+
+function toggleMusic() {
+
+    if (music.paused) {
+
+        music.play();
+
+        musicButton.innerHTML = "🔊";
+
+    } else {
+
+        music.pause();
+
+        musicButton.innerHTML = "🔇";
+
+    }
+}
+
+
+/*
+Browsers normally block autoplay with sound.
+The first tap anywhere on the website starts the music.
+*/
+
+document.addEventListener("click", function startAfterTap() {
+
+    startMusic();
+
+    document.removeEventListener("click", startAfterTap);
+
+}, { once: true });
+
+</script>
 
 </body>
 </html>
