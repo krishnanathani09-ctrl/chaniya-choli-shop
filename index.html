@@ -3,904 +3,658 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="PD Fabrics & Boutique - Discover your perfect Navratri Chaniya Choli collection.">
+<meta name="theme-color" content="#6b1735">
 
-<title>PD Fabrics & Boutique</title>
+<title>PD Fabrics & Boutique | Navratri Collection</title>
 
 <style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Georgia, "Times New Roman", serif;
+    background: #180810;
+    color: #fff;
+    overflow-x: hidden;
+}
 
 /* =========================
-   BASIC
+   NAVRATRI TOP DECORATION
 ========================= */
 
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-}
+.navratri-border {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 28px;
+    background: #35101f;
+    border-bottom: 1px solid rgba(255, 215, 120, 0.5);
+    z-index: 1000;
 
-html{
-    scroll-behavior:smooth;
-}
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
 
-body{
-    font-family:Georgia, serif;
-    background:#fffaf5;
-    color:#3b2118;
-    overflow-x:hidden;
+    color: #f5d58a;
+    font-size: 13px;
+    letter-spacing: 8px;
 }
-
 
 /* =========================
-   FIXED NAVRATRI DECORATION
+   DANDIYA DECORATION
 ========================= */
 
-.nav-decoration{
-    position:fixed;
-    top:0;
-    left:0;
-    width:100%;
-    height:42px;
-    background:#3b2118;
-    z-index:999;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    overflow:hidden;
+.dandiya {
+    position: absolute;
+    width: 130px;
+    height: 130px;
+    pointer-events: none;
+    z-index: 2;
+    opacity: 0.75;
 }
 
-.nav-decoration span{
-    color:#f4c56a;
-    font-size:18px;
-    margin:0 13px;
-    animation:shine 2.5s infinite ease-in-out;
+.dandiya::before,
+.dandiya::after {
+    content: "";
+    position: absolute;
+    width: 105px;
+    height: 7px;
+    left: 12px;
+    top: 62px;
+    border-radius: 10px;
+    background: linear-gradient(
+        90deg,
+        #d6a447,
+        #f7df9b,
+        #d6a447
+    );
+    box-shadow: 0 0 8px rgba(247, 223, 155, 0.35);
 }
 
-.nav-decoration span:nth-child(2){
-    animation-delay:.3s;
+.dandiya::before {
+    transform: rotate(45deg);
 }
 
-.nav-decoration span:nth-child(3){
-    animation-delay:.6s;
+.dandiya::after {
+    transform: rotate(-45deg);
 }
 
-.nav-decoration span:nth-child(4){
-    animation-delay:.9s;
+.dandiya .center {
+    position: absolute;
+    width: 19px;
+    height: 19px;
+    border-radius: 50%;
+    background: #f4d27b;
+    border: 3px solid #7d263f;
+    left: 56px;
+    top: 56px;
+    z-index: 2;
 }
 
-.nav-decoration span:nth-child(5){
-    animation-delay:1.2s;
+.dandiya-left {
+    top: 65px;
+    left: 10px;
+    animation: floatDandiya 4s ease-in-out infinite;
 }
 
-@keyframes shine{
+.dandiya-right {
+    top: 65px;
+    right: 10px;
+    transform: rotate(15deg);
+    animation: floatDandiya 4s ease-in-out infinite reverse;
+}
 
-    0%,100%{
-        opacity:.5;
-        transform:scale(.9);
+@keyframes floatDandiya {
+    0%, 100% {
+        transform: translateY(0) rotate(0deg);
     }
 
-    50%{
-        opacity:1;
-        transform:scale(1.15);
+    50% {
+        transform: translateY(7px) rotate(3deg);
     }
-
 }
-
 
 /* =========================
-   MOVING DANDIYA
+   SECTIONS
 ========================= */
 
-.dandiya-decoration{
-    position:absolute;
-    width:90px;
-    height:90px;
-    opacity:.65;
-    pointer-events:none;
-    animation:moveDandiya 5s ease-in-out infinite;
+.section {
+    min-height: 100vh;
+    width: 100%;
+    position: relative;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 70px 20px 40px;
+    text-align: center;
+
+    overflow: hidden;
 }
 
-.dandiya-decoration.left{
-    left:3%;
-    top:22%;
+.section-inner {
+    width: 100%;
+    max-width: 900px;
+    position: relative;
+    z-index: 5;
 }
-
-.dandiya-decoration.right{
-    right:3%;
-    bottom:18%;
-    animation-delay:1.5s;
-}
-
-.dandiya-stick{
-    position:absolute;
-    width:8px;
-    height:68px;
-    border-radius:10px;
-    background:#9a552e;
-    left:41px;
-    top:11px;
-    transform:rotate(38deg);
-}
-
-.dandiya-stick.second{
-    background:#d19a45;
-    transform:rotate(-38deg);
-}
-
-.dandiya-center{
-    position:absolute;
-    width:15px;
-    height:15px;
-    border-radius:50%;
-    background:#d19a45;
-    left:38px;
-    top:38px;
-}
-
-@keyframes moveDandiya{
-
-    0%,100%{
-        transform:translateY(0) rotate(0deg);
-    }
-
-    50%{
-        transform:translateY(-15px) rotate(7deg);
-    }
-
-}
-
 
 /* =========================
-   COMMON PAGE SETTINGS
+   WELCOME
 ========================= */
 
-.page{
-    position:relative;
-    min-height:100vh;
-    width:100%;
-    padding:90px 20px 60px;
-}
-
-
-/* =========================
-   FIRST PAGE
-========================= */
-
-.hero{
-
-    min-height:100vh;
-
-    display:flex;
-    flex-direction:column;
-    justify-content:center;
-    align-items:center;
-
-    text-align:center;
-
-    background:
-        radial-gradient(
-            circle at top,
-            #fff0d4 0%,
-            #fffaf5 58%,
-            #f6e1cc 100%
-        );
-
-}
-
-.hero h1{
-
-    font-size:clamp(32px,8vw,62px);
-
-    letter-spacing:2px;
-
-    line-height:1.15;
-
-    margin-bottom:22px;
-
-}
-
-.hero h2{
-
-    font-size:clamp(25px,6vw,40px);
-
-    margin-bottom:20px;
-
-}
-
-.hero-text{
-
-    max-width:680px;
-
-    font-family:Arial,sans-serif;
-
-    font-size:18px;
-
-    line-height:1.7;
-
-    margin-bottom:25px;
-
-}
-
-.offer{
-
-    font-family:Arial,sans-serif;
-
-    font-size:23px;
-
-    font-weight:bold;
-
-    letter-spacing:2px;
-
-    margin-bottom:30px;
-
-}
-
-.explore-btn{
-
-    display:inline-block;
-
-    padding:15px 32px;
-
-    background:#3b2118;
-
-    color:#fff;
-
-    text-decoration:none;
-
-    border-radius:30px;
-
-    font-family:Arial,sans-serif;
-
-    font-weight:bold;
-
-    cursor:pointer;
-
-    transition:.3s;
-
-}
-
-.explore-btn:hover{
-
-    transform:scale(1.05);
-
-}
-
-
-/* =========================
-   COLLECTION PAGE
-========================= */
-
-.collection{
-
-    min-height:100vh;
-
-    display:flex;
-
-    flex-direction:column;
-
-    align-items:center;
-
-    text-align:center;
-
-    background:#fffaf5;
-
-}
-
-.collection h2{
-
-    font-size:36px;
-
-    margin-bottom:12px;
-
-}
-
-.collection-subtitle{
-
-    font-family:Arial,sans-serif;
-
-    font-size:16px;
-
-    margin-bottom:30px;
-
-}
-
-
-/* FIXED IMAGE FRAME */
-
-.photo-frame{
-
-    width:min(90vw,500px);
-
-    height:min(72vh,650px);
-
-    min-height:500px;
-
-    display:flex;
-
-    align-items:center;
-
-    justify-content:center;
-
-    background:#fff;
-
-    border-radius:20px;
-
-    padding:12px;
-
-    box-shadow:
-        0 10px 30px rgba(0,0,0,.15);
-
-    overflow:hidden;
-
-    cursor:pointer;
-
-}
-
-.photo-frame img{
-
-    width:100%;
-
-    height:100%;
-
-    object-fit:contain;
-
-    object-position:center;
-
-    display:block;
-
-    border-radius:12px;
-
-}
-
-
-/* PHOTO INSTRUCTION */
-
-.tap-text{
-
-    margin-top:18px;
-
-    font-family:Arial,sans-serif;
-
-    font-size:14px;
-
-    color:#6d554b;
-
-}
-
-
-/* =========================
-   VISIT US PAGE
-========================= */
-
-.visit{
-
-    min-height:100vh;
-
-    display:flex;
-
-    flex-direction:column;
-
-    justify-content:center;
-
-    align-items:center;
-
-    text-align:center;
-
+.welcome {
     background:
         radial-gradient(
             circle at center,
-            #fff0d7 0%,
-            #f8e2cc 100%
+            rgba(145, 40, 73, 0.45),
+            transparent 55%
+        ),
+        linear-gradient(
+            135deg,
+            #220914,
+            #55142f,
+            #260914
         );
-
 }
 
-.visit h2{
-
-    font-size:42px;
-
-    margin-bottom:25px;
-
+.shop-name {
+    font-size: clamp(30px, 7vw, 68px);
+    letter-spacing: 4px;
+    color: #f8df9a;
+    text-shadow: 0 3px 15px rgba(0,0,0,0.5);
+    margin-bottom: 22px;
 }
 
-.shop-name{
-
-    font-size:27px;
-
-    font-weight:bold;
-
-    margin-bottom:22px;
-
+.small-line {
+    width: 90px;
+    height: 2px;
+    background: #e6bd65;
+    margin: 0 auto 25px;
 }
 
-.address{
-
-    font-family:Arial,sans-serif;
-
-    font-size:17px;
-
-    line-height:1.8;
-
-    margin-bottom:30px;
-
+h1 {
+    font-size: clamp(25px, 6vw, 50px);
+    color: #fff1c8;
+    line-height: 1.25;
+    margin-bottom: 22px;
 }
 
-.contact-buttons{
+.hero-text {
+    max-width: 700px;
+    margin: 0 auto 25px;
 
-    display:flex;
-
-    justify-content:center;
-
-    align-items:center;
-
-    flex-wrap:wrap;
-
-    gap:12px;
-
+    font-family: Arial, sans-serif;
+    font-size: clamp(15px, 3.5vw, 19px);
+    line-height: 1.8;
+    color: #f7e9d5;
 }
 
-.contact-buttons a{
+.offer {
+    display: inline-block;
+    margin: 10px 0 30px;
 
-    display:inline-block;
+    padding: 12px 24px;
+    border: 1px solid #e6bd65;
+    border-radius: 30px;
 
-    padding:13px 22px;
-
-    background:#3b2118;
-
-    color:#fff;
-
-    text-decoration:none;
-
-    border-radius:25px;
-
-    font-family:Arial,sans-serif;
-
-    font-weight:bold;
-
-    transition:.3s;
-
+    color: #f8df9a;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: 2px;
 }
 
-.contact-buttons a:hover{
+.cta {
+    display: inline-block;
 
-    transform:translateY(-2px);
+    padding: 15px 30px;
 
+    background: #f0cc78;
+    color: #35101f;
+
+    text-decoration: none;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: 1.5px;
+
+    border-radius: 30px;
+
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
+.cta:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+}
+
+/* =========================
+   COLLECTION
+========================= */
+
+.collection {
+    background:
+        radial-gradient(
+            circle at center,
+            rgba(112, 31, 57, 0.5),
+            transparent 60%
+        ),
+        #16070e;
+}
+
+.collection-title {
+    font-size: clamp(27px, 6vw, 48px);
+    color: #f7d98b;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+}
+
+.collection-subtitle {
+    font-family: Arial, sans-serif;
+    color: #eadcc8;
+    font-size: 15px;
+    line-height: 1.7;
+    margin-bottom: 25px;
+}
+
+/* Fixed photo area */
+.photo-frame {
+    width: min(88vw, 520px);
+    height: clamp(390px, 65vh, 620px);
+
+    margin: 0 auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #0e0509;
+    border: 2px solid rgba(240, 204, 120, 0.7);
+    border-radius: 18px;
+
+    padding: 10px;
+
+    box-shadow:
+        0 15px 45px rgba(0,0,0,0.5),
+        0 0 25px rgba(240, 204, 120, 0.08);
+
+    cursor: pointer;
+    overflow: hidden;
+}
+
+.photo-frame img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: contain;
+
+    display: block;
+
+    border-radius: 10px;
+
+    user-select: none;
+    -webkit-user-drag: none;
+}
+
+/* =========================
+   VISIT US
+========================= */
+
+.visit {
+    background:
+        radial-gradient(
+            circle at center,
+            rgba(126, 35, 62, 0.5),
+            transparent 60%
+        ),
+        linear-gradient(
+            135deg,
+            #230914,
+            #51132d,
+            #200811
+        );
+}
+
+.visit-title {
+    font-size: clamp(32px, 7vw, 58px);
+    color: #f7d98b;
+    margin-bottom: 22px;
+}
+
+.visit-text {
+    max-width: 650px;
+    margin: 0 auto 28px;
+
+    font-size: clamp(17px, 4vw, 22px);
+    line-height: 1.8;
+
+    color: #f8ead6;
+}
+
+.visit-shop {
+    font-size: clamp(22px, 5vw, 34px);
+    color: #fff1c8;
+    margin-bottom: 15px;
+}
+
+.address {
+    max-width: 650px;
+    margin: 0 auto 28px;
+
+    font-family: Arial, sans-serif;
+    font-size: 15px;
+    line-height: 1.7;
+    color: #eadcc8;
+}
+
+.buttons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+}
+
+.contact-button {
+    display: inline-block;
+
+    padding: 13px 21px;
+
+    border: 1px solid #e6bd65;
+    border-radius: 25px;
+
+    color: #f7d98b;
+    text-decoration: none;
+
+    font-family: Arial, sans-serif;
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+
+    transition: background 0.2s ease, color 0.2s ease;
+}
+
+.contact-button:hover {
+    background: #f0cc78;
+    color: #35101f;
+}
 
 /* =========================
    FOOTER
 ========================= */
 
-footer{
+footer {
+    padding: 20px;
 
-    background:#3b2118;
+    background: #100408;
 
-    color:#fff;
+    text-align: center;
 
-    text-align:center;
+    font-family: Arial, sans-serif;
+    font-size: 12px;
 
-    padding:25px 15px;
-
-    font-family:Arial,sans-serif;
-
-    font-size:14px;
-
-    line-height:1.7;
-
+    color: #a99a8c;
 }
-
 
 /* =========================
    MOBILE
 ========================= */
 
-@media(max-width:600px){
+@media (max-width: 600px) {
 
-    .nav-decoration{
-
-        height:38px;
-
+    .navratri-border {
+        height: 24px;
+        font-size: 10px;
+        letter-spacing: 5px;
     }
 
-    .nav-decoration span{
-
-        font-size:15px;
-
-        margin:0 8px;
-
+    .section {
+        padding-top: 55px;
     }
 
-    .page{
-
-        padding-top:75px;
-
+    .dandiya {
+        width: 95px;
+        height: 95px;
+        opacity: 0.55;
     }
 
-    .hero{
-
-        padding-left:18px;
-
-        padding-right:18px;
-
+    .dandiya::before,
+    .dandiya::after {
+        width: 80px;
+        height: 5px;
+        left: 8px;
+        top: 45px;
     }
 
-    .hero-text{
-
-        font-size:16px;
-
+    .dandiya .center {
+        width: 15px;
+        height: 15px;
+        left: 40px;
+        top: 40px;
     }
 
-    .dandiya-decoration{
-
-        transform:scale(.65);
-
+    .dandiya-left {
+        left: -8px;
+        top: 48px;
     }
 
-    .dandiya-decoration.left{
-
-        left:-12px;
-
+    .dandiya-right {
+        right: -8px;
+        top: 48px;
     }
 
-    .dandiya-decoration.right{
-
-        right:-12px;
-
+    .photo-frame {
+        width: 90vw;
+        height: 58vh;
+        min-height: 360px;
+        max-height: 560px;
     }
 
-    .collection{
-
-        padding-left:12px;
-
-        padding-right:12px;
-
+    .buttons {
+        flex-direction: column;
+        align-items: center;
     }
 
-    .collection h2{
-
-        font-size:30px;
-
+    .contact-button {
+        width: min(85vw, 300px);
     }
-
-    .photo-frame{
-
-        width:92vw;
-
-        height:68vh;
-
-        min-height:430px;
-
-        max-height:620px;
-
-    }
-
-    .visit{
-
-        padding-left:20px;
-
-        padding-right:20px;
-
-    }
-
-    .visit h2{
-
-        font-size:34px;
-
-    }
-
-    .shop-name{
-
-        font-size:23px;
-
-    }
-
-    .address{
-
-        font-size:16px;
-
-    }
-
 }
-
-
-/* VERY SMALL PHONES */
-
-@media(max-width:380px){
-
-    .photo-frame{
-
-        height:62vh;
-
-        min-height:390px;
-
-    }
-
-}
-
 </style>
 </head>
 
-
 <body>
 
-
-<!-- =========================
-     NAVRATRI TOP DECORATION
-========================= -->
-
-<div class="nav-decoration">
-
+<!-- Fixed Navratri decoration -->
+<div class="navratri-border">
     <span>✦</span>
     <span>✧</span>
     <span>✦</span>
     <span>✧</span>
     <span>✦</span>
-
+    <span>✧</span>
+    <span>✦</span>
 </div>
 
 
 <!-- =========================
-     PAGE 1
+     WELCOME PAGE
 ========================= -->
 
-<section class="page hero" id="home">
+<section class="section welcome" id="home">
 
-
-    <!-- Moving Dandiya -->
-
-    <div class="dandiya-decoration left">
-
-        <div class="dandiya-stick"></div>
-
-        <div class="dandiya-stick second"></div>
-
-        <div class="dandiya-center"></div>
-
+    <div class="dandiya dandiya-left">
+        <div class="center"></div>
     </div>
 
-
-    <div class="dandiya-decoration right">
-
-        <div class="dandiya-stick"></div>
-
-        <div class="dandiya-stick second"></div>
-
-        <div class="dandiya-center"></div>
-
+    <div class="dandiya dandiya-right">
+        <div class="center"></div>
     </div>
 
+    <div class="section-inner">
 
-    <h1>
-        PD FABRICS &amp; BOUTIQUE
-    </h1>
+        <div class="shop-name">
+            PD FABRICS & BOUTIQUE
+        </div>
 
+        <div class="small-line"></div>
 
-    <h2>
-        Navratri Is Near! ✨
-    </h2>
+        <h1>
+            Navratri Is Almost Here ✨
+        </h1>
 
+        <p class="hero-text">
+            The colours are brighter.<br>
+            The nights are livelier.<br>
+            And your perfect Chaniya Choli is waiting.
+        </p>
 
-    <p class="hero-text">
+        <p class="hero-text">
+            Still looking for your Navratri look?<br>
+            Step into the festive spirit and discover a collection
+            made for Garba nights, vibrant celebrations and unforgettable moments.
+        </p>
 
-        Still waiting to buy your perfect Chaniya Choli?
+        <div class="offer">
+            UP TO 20% OFF
+        </div>
 
-        Explore our beautiful collection and find your
+        <br>
 
-        perfect Navratri look at PD Fabrics &amp; Boutique.
-
-    </p>
-
-
-    <div class="offer">
-
-        UP TO 20% OFF
+        <a href="#collection" class="cta">
+            EXPLORE COLLECTION
+        </a>
 
     </div>
-
-
-    <a
-        href="#collection"
-        class="explore-btn"
-    >
-
-        EXPLORE COLLECTION
-
-    </a>
-
-
 </section>
 
 
-
 <!-- =========================
-     PAGE 2
-     COLLECTION
+     COLLECTION PAGE
 ========================= -->
 
-<section
-    class="page collection"
-    id="collection"
->
+<section class="section collection" id="collection">
 
-
-    <!-- Moving Dandiya -->
-
-    <div class="dandiya-decoration left">
-
-        <div class="dandiya-stick"></div>
-
-        <div class="dandiya-stick second"></div>
-
-        <div class="dandiya-center"></div>
-
+    <div class="dandiya dandiya-left">
+        <div class="center"></div>
     </div>
 
-
-    <div class="dandiya-decoration right">
-
-        <div class="dandiya-stick"></div>
-
-        <div class="dandiya-stick second"></div>
-
-        <div class="dandiya-center"></div>
-
+    <div class="dandiya dandiya-right">
+        <div class="center"></div>
     </div>
 
+    <div class="section-inner">
 
-    <h2>
-        Our Chaniya Choli Collection
-    </h2>
+        <h2 class="collection-title">
+            THE NAVRATRI COLLECTION
+        </h2>
 
+        <p class="collection-subtitle">
+            Where colours meet tradition,<br>
+            and every twirl tells a story.
+        </p>
 
-    <p class="collection-subtitle">
-
-        Tap the photo to explore
-
-    </p>
-
-
-    <!--
-        IMPORTANT:
-        Same frame size for every image.
-        Only the image changes.
-    -->
-
-    <div
-        class="photo-frame"
-        id="photoFrame"
-        onclick="nextPhoto()"
-    >
-
-        <img
-            id="mainPhoto"
-            src="chaniya1.jpg"
-            alt="Chaniya Choli"
+        <div
+            class="photo-frame"
+            onclick="nextPhoto()"
+            aria-label="Tap to view the next Chaniya Choli"
         >
+            <img
+                id="mainPhoto"
+                src="chaniya1.jpg"
+                alt="Chaniya Choli collection"
+                draggable="false"
+            >
+        </div>
 
     </div>
-
-
-    <div class="tap-text">
-
-        Tap the photo for the next design
-
-    </div>
-
-
 </section>
 
 
-
 <!-- =========================
-     LAST PAGE
+     VISIT US PAGE
 ========================= -->
 
-<section
-    class="page visit"
-    id="visit"
->
+<section class="section visit" id="visit">
 
-
-    <!-- Moving Dandiya -->
-
-    <div class="dandiya-decoration left">
-
-        <div class="dandiya-stick"></div>
-
-        <div class="dandiya-stick second"></div>
-
-        <div class="dandiya-center"></div>
-
+    <div class="dandiya dandiya-left">
+        <div class="center"></div>
     </div>
 
-
-    <div class="dandiya-decoration right">
-
-        <div class="dandiya-stick"></div>
-
-        <div class="dandiya-stick second"></div>
-
-        <div class="dandiya-center"></div>
-
+    <div class="dandiya dandiya-right">
+        <div class="center"></div>
     </div>
 
+    <div class="section-inner">
 
-    <h2>
-        Visit Us ✨
-    </h2>
+        <h2 class="visit-title">
+            LET THE FESTIVAL BEGIN
+        </h2>
 
+        <p class="visit-text">
+            Dress in tradition.<br>
+            Dance with joy.<br>
+            Celebrate every twirl.
+        </p>
 
-    <div class="shop-name">
+        <div class="small-line"></div>
 
-        PD Fabrics &amp; Boutique
+        <h3 class="visit-shop">
+            PD FABRICS & BOUTIQUE
+        </h3>
 
-    </div>
+        <p class="address">
+            Near Sai Baba Mandir,<br>
+            Behind Jubliebaugh,<br>
+            Opp. Punjab National Bank,<br>
+            Vadodara, Gujarat.
+        </p>
 
+        <div class="buttons">
 
-    <div class="address">
+            <a
+                href="https://goo.gl/maps/LTTTtiMrXEgqFasB8"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="contact-button"
+            >
+                📍 VISIT US
+            </a>
 
-        Near Sai Baba Mandir,<br>
+            <a
+                href="tel:+919904474454"
+                class="contact-button"
+            >
+                CALL US
+            </a>
 
-        Behind Jubliebaugh,<br>
+            <a
+                href="https://www.instagram.com/pdfabrics/"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="contact-button"
+            >
+                INSTAGRAM
+            </a>
 
-        Opp. Punjab National Bank,<br>
-
-        Vadodara, Gujarat.
-
-    </div>
-
-
-    <div class="contact-buttons">
-
-
-        <a
-            href="https://goo.gl/maps/LTTTtiMrXEgqFasB8"
-            target="_blank"
-        >
-
-            📍 Google Maps
-
-        </a>
-
-
-        <a
-            href="tel:+919904474454"
-        >
-
-            📞 Call Us
-
-        </a>
-
-
-        <a
-            href="https://www.instagram.com/pdfabrics/"
-            target="_blank"
-        >
-
-            Instagram
-
-        </a>
-
+        </div>
 
     </div>
-
-
 </section>
 
-
-
-<!-- =========================
-     FOOTER
-========================= -->
 
 <footer>
-
-    © 2026 PD Fabrics &amp; Boutique<br>
-
-    Celebrate Navratri in Style ✨
-
+    © PD Fabrics & Boutique • Celebrate Navratri in style
 </footer>
-
 
 
 <script>
@@ -910,78 +664,48 @@ footer{
 ========================= */
 
 const photos = [
-
     "chaniya1.jpg",
-
     "chaniya2.jpg",
-
-    "chaniya3.jpg",
-
     "chaniya4.jpg",
-
     "chaniya5.jpg",
-
-    "chaniya6.jpg",
-
     "chaniya7.jpg",
-
     "chaniya8.jpg",
-
     "chaniya9.jpg"
-
 ];
-
 
 let currentPhoto = 0;
 
+const mainPhoto = document.getElementById("mainPhoto");
 
-const mainPhoto =
-    document.getElementById("mainPhoto");
-
-const collection =
-    document.getElementById("collection");
-
-const visit =
-    document.getElementById("visit");
-
-
-/* =========================
-   CHANGE PHOTO
-========================= */
-
-function nextPhoto(){
-
-    /*
-       If the current photo is photo 9,
-       go directly to the last page.
-    */
-
-    if(currentPhoto === photos.length - 1){
-
-        visit.scrollIntoView({
-            behavior:"smooth"
-        });
-
-        return;
-
-    }
-
+function nextPhoto() {
 
     currentPhoto++;
 
+    /*
+       After the last image,
+       go to Visit Us section.
+    */
 
-    mainPhoto.src =
-        photos[currentPhoto];
+    if (currentPhoto >= photos.length) {
 
+        document.getElementById("visit").scrollIntoView({
+            behavior: "smooth"
+        });
+
+        currentPhoto = photos.length - 1;
+
+        return;
+    }
+
+    mainPhoto.src = photos[currentPhoto];
 }
 
 
 /* =========================
-   PRELOAD ALL PHOTOS
-   Helps prevent delay when tapping
+   PRELOAD IMAGES
 ========================= */
 
-photos.forEach(function(photo){
+photos.forEach(function(photo) {
 
     const img = new Image();
 
@@ -989,9 +713,7 @@ photos.forEach(function(photo){
 
 });
 
-
 </script>
-
 
 </body>
 </html>
